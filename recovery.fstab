@@ -9,7 +9,10 @@
 /rpm          emmc    /dev/block/platform/msm_sdcc.1/by-name/rpm
 /sbl1         emmc    /dev/block/platform/msm_sdcc.1/by-name/sbl1
 /system       ext4    /dev/block/platform/msm_sdcc.1/by-name/system                 flags=fsflags="barrier=1"
+/system_image emmc    /dev/block/platform/msm_sdcc.1/by-name/system                 flags=backup=1;flashimg=1
+/vendor       ext4    /dev/block/platform/msm_sdcc.1/by-name/vendor                 flags=display="Vendor";backup=1;wipeingui;fsflags="barrier=1"
+/vendor_image emmc    /dev/block/platform/msm_sdcc.1/by-name/vendor                 flags=backup=1;flashimg=1
 /tz           emmc    /dev/block/platform/msm_sdcc.1/by-name/tz
 
 # External device
-/usbotg        auto      /dev/block/platform/xhci-hcd/by-num/p1            flags=display="USB-OTG";storage;wipeingui;removable
+/usbotg       auto    /dev/block/platform/xhci-hcd/by-num/p1                        flags=display="USB-OTG";storage;wipeingui;removable
